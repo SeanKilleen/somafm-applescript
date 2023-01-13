@@ -1,0 +1,24 @@
+name: Test thing
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  dothething:
+    name: "Do the thing"
+    runs-on: macos-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
+      - name: Setup node
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
+        with:
+          node-version: "16"
+      - name: Restore packages
+        run: npm install
+      - name: Get the output
+        run: node index.mjs
