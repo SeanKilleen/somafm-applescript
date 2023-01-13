@@ -1,5 +1,5 @@
 import {runAppleScript} from 'run-applescript';
-const { readFile } = require('fs/promises')
+import { readFile } from 'fs/promises';
 
 async function content(path) {  
     return await readFile(path, 'utf8')
