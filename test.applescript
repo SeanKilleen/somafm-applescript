@@ -1,5 +1,6 @@
 set testname to "12   This is the Track    "
 
-set trimmed to text without whitespace of testname
+set WordList to words of testname
+set trackNumber to first word of WordList
 
-return trimmed
+return trackNumber
