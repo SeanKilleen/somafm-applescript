@@ -34,5 +34,7 @@ set testname to "12   This is the Track    "
 
 set trimmed to trim_line(testname, " ",2)
 
-set tracknumber to first word in words of trimmed
+set wordlist to words of trimmed
+set tracknumber to first word of wordlist
+
 return tracknumber
