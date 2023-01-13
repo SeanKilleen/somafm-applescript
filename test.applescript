@@ -43,6 +43,4 @@ set wordlist to words of trimmed
 set tracknumber to first item of wordlist
 
 set titlewithouttrack to findAndReplaceFirstOccurrenceInText(trimmed,tracknumber,"")
-set trimmedTitle to trim_line(titlewithouttrack, " ", 2)
-
-return trimmedTitle
+return titlewithouttrack
